@@ -11,8 +11,10 @@
 
   font-family: 'JetBrains Mono', sans-serif;
 
-  width: 64vw;
-  height: 48vh;
+  min-width: 900px;
+  max-width: 900px;
+  min-height: 48vh;
+  max-height: 48vh;
 
   border: 16px solid white;
   border-radius: 8px;
@@ -28,7 +30,9 @@
 
   padding-top: 8px;
 
-  background-color: var(--editor-color)
+  background-color: var(--editor-color);
+
+  overflow: hidden;
 }
 
 .lines-wrapper span {
@@ -64,5 +68,5 @@ textarea {
   
   background-color: var(--editor-color);
 
-  color: var(--string-color);
+  color: white;
 }
