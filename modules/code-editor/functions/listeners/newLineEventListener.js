@@ -2,7 +2,7 @@ function newLineEventListener(editor, linesWrapper) {
   editor.addEventListener('keydown', event => {
     const key = event.which || event.keyCode
 
-    if (key === 13) {
+    if (key === 13) { // Enter
       const lastLineValue = Number(linesWrapper.lastElementChild.textContent)
       const nextLineSpan = document.createElement("span")
 
