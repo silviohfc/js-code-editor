@@ -45,7 +45,7 @@
   display: block;
 }
 
-textarea {
+.editor {
   -moz-tab-size : 2;
   -o-tab-size : 2;
   tab-size : 2;
@@ -69,4 +69,6 @@ textarea {
   background-color: var(--editor-color);
 
   color: white;
+
+  overflow: auto;
 }

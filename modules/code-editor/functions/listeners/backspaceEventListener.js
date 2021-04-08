@@ -3,7 +3,7 @@ function backspaceEventListener(editor, linesWrapper) {
     const key = event.which || event.keyCode
 
     if (key === 8) { // Backspace
-      const textLines = editor.value.split("\n").length;
+      const textLines = editor.childElementCount;
       const wrapperLines = linesWrapper.childElementCount
 
       for (let i = wrapperLines; i > textLines; i--) {

@@ -5,13 +5,17 @@ function tabEventListener(editor, linesWrapper) {
     if (key === 9) { // Tab
       event.preventDefault()
 
-      const start = editor.selectionStart;
-      const end = editor.selectionEnd;
+      const editorView = editor.ownerDocument.defaultView;
+      const selection = editorView.getSelection();
+      const range = selection.getRangeAt(0);
 
-      editor.value = editor.value.substring(0, start) + 
-        "\t" + editor.value.substring(end);
+      const tabNode = document.createTextNode("\u00a0\u00a0");
+      range.insertNode(tabNode);
 
-      editor.selectionStart = editor.selectionEnd = start + 1;
+      range.setStartAfter(tabNode);
+      range.setEndAfter(tabNode); 
+      selection.removeAllRanges();
+      selection.addRange(range);
     }
   })
 }
