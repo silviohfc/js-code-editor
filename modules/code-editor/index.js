@@ -1,6 +1,7 @@
 import { newLineEventListener } from './functions/listeners/newLineEventListener.js';
 import { scrollEventListener } from './functions/listeners/scrollEventListener.js'
 import { backspaceEventListener } from './functions/listeners/backspaceEventListener.js'
+import { tabEventListener } from './functions/listeners/tabEventListener.js'
 
 class CodeEditor {
   static initialize() {
@@ -14,6 +15,7 @@ class CodeEditor {
     newLineEventListener(this.editor, this.linesWrapper)
     scrollEventListener(this.editor, this.linesWrapper)
     backspaceEventListener(this.editor, this.linesWrapper)
+    tabEventListener(this.editor, this.linesWrapper)
   }
 }
 
