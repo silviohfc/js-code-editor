@@ -5,10 +5,6 @@
 }
 
 .editor-container {
-  display: grid;
-  grid-template-columns: 72px 1fr;
-
-
   font-family: 'JetBrains Mono', sans-serif;
 
   min-width: 900px;
@@ -45,7 +41,7 @@
   display: block;
 }
 
-.editor {
+.CodeMirror {
   -moz-tab-size : 2;
   -o-tab-size : 2;
   tab-size : 2;
@@ -69,6 +65,4 @@
   background-color: var(--editor-color);
 
   color: white;
-
-  overflow: auto;
 }
