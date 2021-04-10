@@ -1,10 +1,13 @@
-import { snippets, showSnippets } from './snippets.js'
+import { showSnippets } from './snippets.js'
+
+import { themeChange } from './listeners/theme-change.js'
 
 const editor = setEditor()
 
 class CodeEditor {
   static initialize() {
     setSnippetsShortcut()
+    setEventListeners()
   }
 }
 
@@ -29,6 +32,10 @@ function setEditor() {
     styleActiveLine: true,
     autoCloseBrackets: true
   })
+}
+
+function setEventListeners() {
+  themeChange(editor)
 }
 
 export { CodeEditor }
